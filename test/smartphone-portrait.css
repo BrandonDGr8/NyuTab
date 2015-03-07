@@ -1,0 +1,361 @@
+* { 
+        -moz-user-select: none; 
+        -khtml-user-select: none; 
+        -webkit-user-select: none; 
+        -o-user-select: none; 
+}
+
+.time {
+    margin-top: 50%;
+    margin-bottom: 50%;
+    height: 100%;
+    width: 100%;
+    font-family: "Open Sans", helvetica;
+    text-align: center;
+    color: #FFFFFF;
+    position: fixed;
+}
+
+p {
+    display: inline;
+}
+
+#txt {
+    font-size: 12em;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#smaller {
+    font-size: 6em;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#small {
+    font-size: 9em;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#agetxt {
+    font-size: 3em;
+    display: none;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    z-index: -999;
+}
+
+.stretch {
+    width: 100%;
+    height: 100%;
+}
+
+.link {
+    font-family: "Open Sans", helvetica;
+    text-decoration: underline;
+    font-size: 1em;
+    color: #000000;   
+}
+
+a {
+    font-size: 1.8em;
+    text-decoration: none;
+    color: #000000;
+}
+
+.button {
+    height: 100px;
+    width: 100px;
+    top: 1%;
+    left: 1%;
+    position: fixed;
+}
+
+.top {
+    height: 20%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    top: 10%;
+    left: 0%;
+    background-color: #FFFFFF;
+    position: relative;
+    border: 1px solid black;
+}
+
+.mid {
+    height: 20%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    top: 20%;
+    left: 0%;
+    background-color: #FFFFFF;
+    position: relative;
+    border: 1px solid black;
+}
+
+.bot {
+    height: 20%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    top: 30%;
+    left: 0%;
+    background-color: #FFFFFF;
+    position: relative;
+    border: 1px solid black;
+}
+
+.list {
+    text-align: center;
+    background-color: #FFFFFF;
+    height: auto;
+    width: 28%;
+    top: 1%;
+    left: 1%;
+    position: absolute;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    overflow: hidden;
+    display: none;
+}
+
+h1 {
+    font-family: "Open Sans", helvetica;
+    font-size: 2em;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Open Sans", helvetica;
+    font-size: 2em;
+    text-align: center;
+}
+
+h3 {
+    font-family: "Open Sans", helvetica;
+    font-size: 2.4em;
+    text-align: center;
+}
+
+p {
+    font-family: "Open Sans", helvetica;
+    list-style: none;
+    font-size: 2.6em;
+    text-align: left;
+}
+
+.mountains {
+    cursor: pointer;
+}
+
+.beach {
+    cursor: pointer;
+}
+
+.sky {
+    cursor: pointer;
+}
+
+.city {
+    cursor: pointer;
+}
+
+.arctic {
+    cursor: pointer;
+}
+
+.forest {
+    cursor: pointer;
+}
+
+.desert {
+    cursor: pointer;
+}
+
+.earth {
+    cursor: pointer;
+}
+
+.custom {
+    cursor: pointer;
+}
+
+.options {
+    cursor: pointer;
+}
+
+.i {
+    height: 38px;
+    width: 38px;
+    cursor: pointer;
+    position: relative;
+    /*margin-left: 45%;
+    margin-right: 55%;*/
+    background-color: #000000;
+    color: #FFFFFF;
+    border-radius: 100%;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.8em;
+    font-family: "Open Sans", helvetica;
+}
+
+.description {
+    font-size: 1.8em;
+    font-family: "Open Sans", helvetica;
+    text-align: left;
+    background-color: #FFFFFF;
+    height: auto;
+    width: 60%;
+    top: 1%;
+    left: 29%;
+    position: absolute;
+    padding-top: 4%;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 4%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    margin-bottom: 2%;
+    display: none;
+}
+
+.close {
+    height: 38px;
+    width: 38px;
+    cursor: pointer;
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    background-color: #000000;
+    color: #FFFFFF;
+    border-radius: 100%;
+    text-align: center; 
+}
+
+#dawnbox, #daybox, #sunsetbox, #nightbox {
+    margin-top: 1%;
+}
+
+.optionsmenu {
+    font-size: 1.8em;
+    font-family: "Open Sans", helvetica;
+    text-align: left;
+    background-color: #FFFFFF;
+    height: auto;
+    width: 60%;
+    top: 1%;
+    left: 29%;
+    position: absolute;
+    padding-top: 4%;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 4%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    margin-bottom: 1%;
+    display: none;
+    text-align: center;
+}
+
+.customtxt {
+    font-size: 1.8em;
+    font-family: "Open Sans", helvetica;
+    text-align: center;
+}
+
+.savebutton, .saveAge {
+    font-size: 1.8em;
+    cursor: pointer;
+    font-family: "Open Sans", helvetica;
+    width: auto;
+    height: auto;
+}
+
+.textbox {
+    font-size: 1.8em;
+    font-family: "Open Sans", helvetica;
+    width: 60%;
+    height: 70px;
+}
+
+.displayAge {
+    float: left;
+    width: 49%;
+    /*position: absolute;*/
+    text-align: center;
+    /*left: 5%;*/
+    border-style: solid;
+    border-width: 1px;
+    padding: 2%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    cursor: pointer;
+}
+
+.displayClock {
+    float: right;
+    width: 49%;
+    /*position: absolute;*/
+    text-align: center;
+    /*right: 25%;*/
+    border-style: solid;
+    border-width: 1px;
+    padding: 2%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    cursor: pointer;
+}
+
+#monthinput, #dayinput {
+    font-family: "Open Sans", helvetica;
+    width: 15%;
+    margin-top: 3%;
+    height: 70px;
+    font-size: 1.8em;
+}
+
+#yearinput {
+    font-family: "Open Sans", helvetica;
+    width: 30%;
+    margin-top: 3%;
+    height: 70px;
+    font-size: 1.8em;
+}
+
+.saveAge {
+    font-family: "Open Sans", helvetica;
+    margin-top: 3%;
+    cursor: pointer;
+}
+
+.afterAgeClick {
+    display: none;
+}
+
+.optionHighlight {
+    color: #FFFFFF;
+    background-color: #000000;
+    opacity: 0.7;
+}
+
+.datebox {
+    text-align: center;
+}

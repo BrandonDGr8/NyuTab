@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+        <link rel="stylesheet" type="text/css" media="only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="smartphone-portrait.css" />
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <title>Nyu Tab Alpha</title>
+    </head>
+
+    <body onload="startTime()">
+        <div class="time">
+            <p id="agetxt">Age</p><p id="txt"></p><p id="smaller"></p><p id="small"></p>
+        </div>
+        <div id="background">
+            <img id="image" src="" class="stretch" alt=""/>
+        </div>
+        <div class="button">
+            <div class="top"></div>
+            <div class="mid"></div>
+            <div class="bot"></div>
+        </div>
+        <div class="list">
+                <h1>Select Scenery</h1>
+                <p class="mountains">Mountains</p><br>
+                <p class="beach">Beaches</p><br>
+                <p class="sky">Skies</p><br>
+                <p class="city">City</p><br>
+                <p class="arctic">Arctic</p><br>
+                <p class="forest">Forest</p><br>
+                <p class="desert">Desert</p><br>
+                <p class="earth">Earth</p><br>
+                <p class="custom">Custom</p><br>
+                <p class="options">Options</p><br>
+                <div class="i">i</div>   
+        </div>
+        <div class="description">
+            <div class="close">X</div>
+            Thanks for using Nyu Tab!<br>
+            This page is meant to be your browser's New Tab or Home page. The background changes depending on the time of day. You may change your scenery by clicking the options on the top left. This is still a work in progress so expect future updates!<br>
+            If your browser does not support customization of your New Tab page, find an addon or extension for your browser that allows this.<br><br>
+            Visit <a class="link" href="http://yucode.org/">yucode.org</a> and contact me if you have feedback or questions!<br>
+            If you use and enjoy Nyu Tab, <a class="link" href="https://www.facebook.com/YourNyuTab">like it on Facebook</a> for updates!
+
+        </div>
+        
+        <div class="optionsmenu">
+            <div class="close">X</div>
+            <h2>Options:</h2>
+            <h3>Edit Custom Image URLs:</h3>
+            <div class="cdawn"><p class="customtxt">Dawn:</p><br>
+                <input name="dawnbox" id="dawnbox" type="text" class="textbox"/>
+                <input name="buttonExecute" onclick="saveCustom('dawnbox')" type="button" value="Save" class="savebutton"/>
+                
+            </div>
+            <div class="cday"><p class="customtxt">Day:</p><br>
+                <input name="daybox" id="daybox" type="text" class="textbox"/>
+                <input name="buttonExecute" onclick="saveCustom('daybox')" type="button" value="Save" class="savebutton"/>
+                
+            </div>
+            <div class="csunset"><p class="customtxt">Sunset:</p><br>
+                <input name="sunsetbox" id="sunsetbox" type="text" class="textbox"/>
+                <input name="buttonExecute" onclick="saveCustom('sunsetbox')" type="button" value="Save" class="savebutton"/>
+                
+            </div>
+            <div class="cnight"><p class="customtxt">Night:</p><br>
+                <input name="nightbox" id="nightbox" type="text" class="textbox"/>
+                <input name="buttonExecute" onclick="saveCustom('nightbox')" type="button" value="Save" class="savebutton"/>
+                
+            </div>
+            <br>
+            <p class="customtxt">Make sure the link ends in an image extension (.jpg, .png, etc.)! Some images may take some time to load. If your image does not appear, try refreshing or there may be something wrong with the link you provided.</p>
+            <br>
+            <h3>Display:</h3>
+            <div class="displayAge">
+                Display Age<br class="afterAgeClick">
+                <input type="text" name="monthinput" title="MM" style="color:#888;"value="MM" onfocus="inputFocus(this)" onblur="inputBlur(this)" id='monthinput' class="afterAgeClick datebox"/>
+                <input type="text" name="dayinput" title="DD" style="color:#888;"value="DD" onfocus="inputFocus(this)" onblur="inputBlur(this)" id='dayinput' class="afterAgeClick datebox"/>
+                <input type="text" name="yearinput" title="YYYY" style="color:#888;"value="YYYY" onfocus="inputFocus(this)" onblur="inputBlur(this)" id='yearinput' class="afterAgeClick datebox"/><br>
+                <input name="saveAge" onclick="saveAge('monthinput', 'dayinput', 'yearinput')" type="button" value="Save" class="saveAge afterAgeClick"/>
+            </div>
+            <div class="displayClock">Display Clock</div>
+        </div>
+        
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+            <script type="text/javascript" src="jquery-cookies/jquery.cookie.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+
+</html>
