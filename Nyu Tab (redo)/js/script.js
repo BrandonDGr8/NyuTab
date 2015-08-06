@@ -40,7 +40,36 @@ function clock() { //gets the time
 	var timeString = hour + ":" + minute + ":" + second;
 	document.getElementById('main').innerHTML = timeString;
 	document.getElementById('sub').innerHTML = period;
-	
-	console.log(hour + ":" + minute + ":" + second + period)
 	setTimeout('clock()',1000);
 }
+
+var mouseX = 0;
+var mouseY = 0;
+var menuOpen = false;
+
+$("body").mousemove(function(e) {
+    mouseX = e.pageX;
+    mouseY = e.pageY;
+    if (menuOpen==false && mouseX < 21) {
+    	$('.menu').css("width","280px");
+    	menuOpen = true;
+    }
+    if (menuOpen && mouseX > 280) {
+    	$('.menu').css("width","0px");
+    	menuOpen = false;;
+    };
+})
+
+$(".option-button").click(function(){
+	$(".option-button").hide();
+	$(".back-button").show();
+	$(".scenery-text").hide();
+	$(".option-text").show();
+});
+
+$(".back-button").click(function(){
+	$(".back-button").hide();
+	$(".option-button").show();
+	$(".option-text").hide();
+	$(".scenery-text").show();
+});

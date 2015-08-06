@@ -52,7 +52,7 @@ html, body {
 	}
 	.menu {
 		position: absolute;
-		width: 280px;
+		width: 0px;
 		height: 100%;
 		top: 0;
 		left: 0;
@@ -61,6 +61,9 @@ html, body {
 		// box-shadow: 2px 0px 0px 0px rgba(247,247,247,0.4);
 		font-family: $text-font;
 		color: $color-black;
+		transition:width 0.7s;
+		-webkit-transition:width 0.7s;
+		overflow:hidden;
 		h1, p {
 			text-align: center
 		}
@@ -73,7 +76,35 @@ html, body {
 		}
 		p {
 			font-size: 30px;
+			cursor: pointer;
 		}
+		.option-text {
+			display:none;
+		}
+		.option-header {
+		    overflow: hidden;
+		    white-space: nowrap;
+		    cursor: auto;
+		}
+		.input-wrap {
+			text-align: center;
+			input {
+				margin: 8px auto;
+				font-size: 20px;
+				font-family: $text-font;
+				text-align: center;
+				background: transparent;
+			}
+			.save-button {
+				border: solid 1px $color-lightgray;
+				text-align: center;
+				background: transparent;
+				font-size: 20px;
+				font-family: $text-font;
+				cursor:pointer;
+			}
+		}
+			
 		.extra {
 			position: absolute;
 			left: 0;
@@ -97,9 +128,22 @@ html, body {
 						display: table-cell;
 						vertical-align: middle;
 						text-align: center;
+						i {
+							cursor:pointer;
+						}
+						.back-button {
+							display: none;
+						}
 					}
 				}
 			}
 		}
 	}
 }
+
+// .expanded {
+// 	display: block;
+// 	width: 280px;
+// 	transition:width 0.7s;
+// 	-webkit-transition:width 0.5s;
+// }
