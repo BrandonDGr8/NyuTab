@@ -62,14 +62,35 @@ $("body").mousemove(function(e) {
 
 $(".option-button").click(function(){
 	$(".option-button").hide();
-	$(".back-button").show();
+	$(".info-button").show();
+	$(".option-back-button").show();
 	$(".scenery-text").hide();
 	$(".option-text").show();
+	$('.info-text').hide();
+	$(".info-back-button").hide();
+});
+
+$(".info-button").click(function(){
+	$(".option-button").show();
+	$(".info-button").hide();
+	$(".info-back-button").show();
+	$(".scenery-text").hide();
+	$(".option-text").hide();
+	$('.info-text').show();
+	$(".option-back-button").hide();
+	document.getElementById("description").style.display = "-webkit-box";
 });
 
 $(".back-button").click(function(){
 	$(".back-button").hide();
+	$(".info-button").show();
 	$(".option-button").show();
 	$(".option-text").hide();
 	$(".scenery-text").show();
+	$(".age-input").hide();
+	$('.info-text').hide();
+});
+
+$(".age-button").click(function(){
+	$(".age-input").show();
 });

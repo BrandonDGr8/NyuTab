@@ -15,10 +15,10 @@
 			</div>
 			<div class="menu">
 				<h1 class="scenery-text"><u>Scenery</u></h1>
-				<p class="scenery-text 1">Mountain</p>
-				<p class="scenery-text 2">Beach</p>
-				<p class="scenery-text 3">Sky</p>
-				<p class="scenery-text 3">Custom</p>
+				<p class="scenery-text scenery-button 1">Mountain</p>
+				<p class="scenery-text scenery-button 2">Beach</p>
+				<p class="scenery-text scenery-button 3">Sky</p>
+				<p class="scenery-text scenery-button 3">Custom</p>
 
 				<h1 class="option-text"><u>Options</u></h1>
 				<p class="option-text option-header">Custom Images</p>
@@ -30,15 +30,25 @@
 					<input type="button" value="Save" onclick="" class="option-text save-button">
 				</div>
 				<p class="option-text option-header">Text Display</p>
+				<div class="input-wrap">
+					<input type="button" value="Show Clock" onclick="" class="option-text clock-button display-button">
+					<input type="button" value="Show Age" onclick="" class="option-text age-button display-button">
+					<input type="date" name="age" class="age-input" id="age-input">
+				</div>
+
+				<h1 class="info-text"><u>About</u></h1>
+				<div class="info-wrap">
+					<p class="info-text" id="description">This is Nyu Tab, a page meant to replace your Internet browser's New Tab or Home page. The background image will change when it is dawn, day, dusk, and night! You may select the scenery you'd like to see or pick your own images!</p>
+				</div>
 					
 				<div class="extra">
 					<div class="wrap">
 						<div class="extra-container">
-							<div class="button-container"><i class="option-button fa fa-cog"></i><i class="back-button fa fa-arrow-left"></i></div>
+							<div class="button-container"><i class="option-button fa fa-cog"></i><i class="back-button option-back-button fa fa-arrow-left"></i></div>
 
 						</div>
 						<div class="extra-container">
-							<div class="button-container"><i class="info-button fa fa-info-circle"></i></div>
+							<div class="button-container"><i class="info-button fa fa-info-circle"></i><i class="back-button info-back-button fa fa-arrow-left"></i></div>
 						</div>
 					</div>
 				</div>
