@@ -28,6 +28,31 @@ function getPeriod(i) { //checks if time is AM or PM
 	}
 }
 
+var dawn = "url(img/1/1.jpg)"; //variables to hold background
+var day = "url(img/1/2.jpg)";
+var sunset = "url(img/1/3.jpg)";
+var night = "url(img/1/4.jpg)";
+
+function checkBackground() {
+    var today = new Date();
+    var h = today.getHours();
+        if (h < 5) {
+            $(".container").css("background-image", night);
+        }
+        else if (h < 9) {
+            $(".container").css("background-image", dawn);
+        }
+        else if (h < 17) {
+            $(".container").css("background-image", day);
+        }
+        else if (h < 21) {
+            $(".container").css("background-image", sunset);
+        }
+        else {
+            $(".container").css("background-image", night);
+        }
+}
+
 function clock() { //gets the time
 	var today = new Date();
 	var hour = today.getHours(); //gets current hour of time
@@ -41,6 +66,7 @@ function clock() { //gets the time
 	document.getElementById('main').innerHTML = timeString;
 	document.getElementById('sub').innerHTML = period;
 	setTimeout('clock()',1000);
+	checkBackground();
 }
 
 var mouseX = 0;
@@ -78,6 +104,7 @@ $(".info-button").click(function(){
 	$(".option-text").hide();
 	$('.info-text').show();
 	$(".option-back-button").hide();
+	$(".age-input").hide();
 	document.getElementById("description").style.display = "-webkit-box";
 });
 
@@ -94,3 +121,7 @@ $(".back-button").click(function(){
 $(".age-button").click(function(){
 	$(".age-input").show();
 });
+
+
+//
+
