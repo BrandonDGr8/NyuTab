@@ -15,23 +15,21 @@ function checkHour(i) {
 	return i;
 }
 
-function getPeriod(i) { //checks if time is AM or PM
-	if (i <= 11) {
+function getPeriod() { //checks if time is AM or PM
+    var today = new Date();
+    var h = today.getHours();
+	if (h <= 11) {
 		return "AM";
-		if (i == 0) i = 12;
 	}
 	else {
-		if (i != 12) {
-			i-=12;
-		}
 		return "PM"
 	}
 }
 
-var dawn = "url(img/1/1.jpg)"; //variables to hold background
-var day = "url(img/1/2.jpg)";
-var sunset = "url(img/1/3.jpg)";
-var night = "url(img/1/4.jpg)";
+var dawn = ""; //variables to hold background
+var day = "";
+var sunset = "";
+var night = "";
 
 function checkBackground() {
     var today = new Date();
@@ -61,24 +59,29 @@ function clock() { //gets the time
 	hour = checkHour(hour);
 	minute = checkTime(minute); //makes sure minute and seconds dont display 10 on the clock
 	second = checkTime(second);
-	var period = getPeriod(hour); //gets AM or PM
+	var period = getPeriod(); //gets AM or PM
 	var timeString = hour + ":" + minute + ":" + second;
 	document.getElementById('main').innerHTML = timeString;
 	document.getElementById('sub').innerHTML = period;
 }
 
 function age(month, day, year) {
-    var today = new Date();
-    var presentDate = ((today.getMonth()+1)/12)+(today.getDate()/365.25);
-    var birthday = (month/12)+(day/365.25);
-    var h = ((today.getHours())/8766);
-    var m = (today.getMinutes())/525960;
-    var s = (today.getSeconds())/31557600;
-    var ms = (today.getMilliseconds()+1)/31557600000;
-    var timeSince = (today.getFullYear() + presentDate + h + m + s + ms) - (year + birthday);
-    var decimal = timeSince - Math.floor(timeSince);
-    document.getElementById('main').innerHTML = (round(timeSince, 10)).toFixed(10) | 0;
-    document.getElementById('sub').innerHTML = ((decimal.toFixed(10))).replace(/^0+/, '');
+	if (isNaN(month)||isNaN(day)||isNaN(year)){
+		clock();
+	}
+	else {
+		var today = new Date();
+	    var presentDate = ((today.getMonth()+1)/12)+(today.getDate()/365.25);
+	    var birthday = (month/12)+(day/365.25);
+	    var h = ((today.getHours())/8766);
+	    var m = (today.getMinutes())/525960;
+	    var s = (today.getSeconds())/31557600;
+	    var ms = (today.getMilliseconds()+1)/31557600000;
+	    var timeSince = (today.getFullYear() + presentDate + h + m + s + ms) - (year + birthday);
+	    var decimal = timeSince - Math.floor(timeSince);
+	    document.getElementById('main').innerHTML = (round(timeSince, 10)).toFixed(10) | 0;
+	    document.getElementById('sub').innerHTML = ((decimal.toFixed(10))).replace(/^0+/, '');
+	}
 }
 
 var mouseX = 0;
@@ -162,6 +165,50 @@ function run() {
 	setTimeout('run()',1000);
 }
 
+var currentScene = "";
+
+$('.1').click(function(){
+	currentScene=1;
+});
+$('.2').click(function(){
+	currentScene=2;
+});
+$('.3').click(function(){
+	currentScene=3;
+});
+
+function checkScene(i) {
+	switch (i) {
+		case 1:
+			dawn = "url(img/1/1.jpg)";
+			day = "url(img/1/2.jpg)";
+			sunset = "url(img/1/3.jpg)";
+			night = "url(img/1/4.jpg)";
+			break;
+		case 2:
+			dawn = "url(img/2/1.jpg)";
+			day = "url(img/2/2.jpg)";
+			sunset = "url(img/2/3.jpg)";
+			night = "url(img/2/4.jpg)";
+			break;
+		case 3:
+			dawn = "url(img/3/1.jpg)";
+			day = "url(img/3/2.jpg)";
+			sunset = "url(img/3/3.jpg)";
+			night = "url(img/3/4.jpg)";
+			break;
+		default:
+			dawn = "url(img/1/1.jpg)";
+			day = "url(img/1/2.jpg)";
+			sunset = "url(img/1/3.jpg)";
+			night = "url(img/1/4.jpg)";
+	}
+}
+
+$('.scenery-button').click(function(){
+	checkScene(currentScene);
+});
+
 
 
 
@@ -191,4 +238,3 @@ function inputFocus(i){
 function inputBlur(i){
     if(i.value==""){ i.value=i.defaultValue; i.style.color="#888"; }
 }
-
